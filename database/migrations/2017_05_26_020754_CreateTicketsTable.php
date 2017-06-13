@@ -24,6 +24,7 @@ class CreateTicketsTable extends Migration
             $table->unsignedInteger('priority');
             $table->timestamp('closed_at')->nullable();
             $table->unsignedInteger('user_id');
+            $table->unsignedInteger('user_update');
             $table->timestamps();
         });
     }
