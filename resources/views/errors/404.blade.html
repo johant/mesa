@@ -1,0 +1,40 @@
+@extends('layouts.master')
+
+@section('header')
+<h1>
+  SISTEMA DE TICKETS
+  <small></small>
+</h1>
+<ol class="breadcrumb">
+  <li><a href="{{ route('dashboard')}}"><i class="fa fa-dashboard"></i> Inicio</a></li>
+  <li class="active">Error</li>
+</ol>
+@stop
+
+@section('content')
+  <div class="error-page">
+    <h2 class="headline text-yellow"> 404</h2>
+
+    <div class="error-content">
+      <h3><i class="fa fa-warning text-yellow"></i> Pagina no Encontrada.</h3>
+
+      <p>
+        No se encuentra la pagina que esta solcitando.
+        Mientras tanto puede <a href="{{route('dashboard')}}">regrear al dashboard</a>.
+      </p>
+
+      <form class="search-form">
+        <div class="input-group">
+          <input type="text" name="search" class="form-control" placeholder="Search">
+
+          <div class="input-group-btn">
+            <button type="submit" name="submit" class="btn btn-warning btn-flat"><i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <!-- /.input-group -->
+      </form>
+    </div>
+    <!-- /.error-content -->
+  </div>
+@stop
