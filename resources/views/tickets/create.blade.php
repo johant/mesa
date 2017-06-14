@@ -90,7 +90,7 @@
 <div class="row">
   <div class="alert alert-danger alert-dismissable">
     <p>
-      Para descargar el formato de incidente paso a paso, por favor haga click <a href="{{ asset('Formato/Formato_documentación_incidentes_requerimientos.docx') }}" target="_blank">aqui</a> .
+      Para descargar el formato de incidente paso a paso, por favor haga click <a href="{{ asset('Formato/formato_incidentes.docx') }}" target="_blank">aqui</a> .
     </p>
   </div>
 </div>
