@@ -133,7 +133,7 @@ class TicketsController extends Controller
         'type' => 'Crear',
         );
       Mail::send('template.ticket', $data, function ($message) use ($data) {
-          $message->from('sap@marpico.co', 'Mesa de Ayuda');
+          $message->from('helpdesk@marpico.net', 'Mesa de Ayuda');
           $message->to($data['email']);
               // ->cc('jatelleza@marpico.com.co', 'Jorge Tellez')
               // ->cc('jtorroledo@marpico.com.co', 'Johan Torroledo')->subject($data['subj']);
