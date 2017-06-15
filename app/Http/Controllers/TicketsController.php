@@ -207,7 +207,7 @@ class TicketsController extends Controller
         'type' => 'Modificar',
         );
       Mail::send('template.ticket', $data, function ($message) use ($data) {
-          $message->from('sap@marpico.co', 'Mesa de Ayuda');
+          $message->from('helpdesk@marpico.net', 'Mesa de Ayuda');
           $message->to($data['email']);
               // ->cc('jatelleza@marpico.com.co', 'Jorge Tellez')
               // ->cc('jtorroledo@marpico.com.co', 'Johan Torroledo')->subject($data['subj']);
@@ -257,7 +257,7 @@ class TicketsController extends Controller
         'type' => 'Cerrar',
         );
       Mail::send('template.ticket', $data, function ($message) use ($data) {
-          $message->from('sap@marpico.co', 'Mesa de Ayuda');
+          $message->from('helpdesk@marpico.net', 'Mesa de Ayuda');
           $message->to($data['email']);
               // ->cc('jatelleza@marpico.com.co', 'Jorge Tellez')
               // ->cc('jtorroledo@marpico.com.co', 'Johan Torroledo')->subject($data['subj']);
@@ -265,7 +265,7 @@ class TicketsController extends Controller
           if($data['mails'] != ""){
               $message->cc($data['mails'])->subject($data['subj']);
               $message->bcc('jtorroledo@marpico.com.co', 'Johan Torroledo')->subject($data['subj']);
-              // $message->bcc('jatelleza@marpico.com.co', 'Jorge Tellez')->subject($data['subj']);
+              $message->bcc('jatelleza@marpico.com.co', 'Jorge Tellez')->subject($data['subj']);
           }
       });
       return redirect('/')->with('flash', 'El incidente con el Numero '.  $ticket->id. ' ha sido cerrado!!');

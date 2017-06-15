@@ -19,4 +19,6 @@ Route::get('/tickets/{ticket}', 'TicketsController@show')->name('tickets.show');
 Route::get('/tickets/edit/{ticket}', 'TicketsController@edit')->name('tickets.edit');
 Route::post('/tickets/edit/{ticket}', 'TicketsController@update')->name('tickets.update');
 Route::post('/tickets/close/{ticket}', 'TicketsController@closed')->name('tickets.close');
+Route::get('/users/', 'UsersController@index')->name('users.index');
+Route::get('/users/edit/{user}', 'UsersController@edit')->name('users.close');
 Route::get('logout', 'HomeController@logout')->name('logout');
